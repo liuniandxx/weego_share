@@ -1,0 +1,94 @@
+body, ul, li,p {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+a{
+	text-decoration: none;
+}
+body {
+    font-family: helvetica;
+    background-image: url(../resource/img/pgc/bg.png);
+    background-size: cover;
+    color: #fff;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.bg img{
+	width: 100%;
+	height: 100%;
+}
+.bg .bg_title{
+	top: 44%;
+	margin:0 28px;
+	width: 95%;
+	font-size: 58px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	text-shadow:1px 1px 1px rgba(0,0,48,0.6);
+}
+.page{
+	margin:0 16px 40px 16px;
+	border-bottom: 1px solid rgba(138,138,138,0.4);
+}
+.page .title{
+	margin:40px 12px;
+	font-size: 45px;
+}
+.page .text{
+	margin:40px 12px;
+	font-size: 38px;
+	line-height: 60px;
+}
+.page .resource{
+	
+	margin:40px 12px 60px 12px;
+}
+.page .resource .time{
+	opacity: 0.6;
+	font-size: 32px;
+	float: left;
+}
+.page .resource span{
+	margin-right: 20px;
+}
+.page .resource .readmore{
+	float: right;
+}
+.page .resource .readmore a{
+	color: #fff;
+	float: left;
+	font-size: 35px;
+	margin-right: 20px;
+}
+.page .resource .readmore .arrow{
+	margin-top: 4px;
+	float: right;
+	width:0; 
+    height:0; 
+    border-top:17px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #fff;
+}
+.page .pic{
+	background-size: cover;
+	height: 530px;
+	margin:60px 0 20px 0;
+}
+.page .pic_desc{
+	margin:20px 12px 40px 12px;
+	font-size: 30px;
+	opacity: 0.5;
+	text-align: center;
+}
+footer{
+	margin-bottom: 80px;
+}

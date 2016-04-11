@@ -1,0 +1,73 @@
+package com.weego.main.service.impl;
+
+
+import com.google.common.base.Strings;
+import com.weego.main.dao.NewsDao;
+import com.weego.main.dto.NewsContentDto;
+import com.weego.main.dto.NewsDto;
+import com.weego.main.model.News;
+import com.weego.main.model.NewsContent;
+import com.weego.main.service.NewsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@Service("newsService")
+public class NewsServiceImpl implements NewsService {
+
+    @Autowired
+    NewsDao newsDao;
+
+    @Override
+    public NewsDto getNewsById(String newsId) {
+        News news = newsDao.getNewsById(newsId);
+
+        if (news == null) {
+            return null;
+        } else {
+            NewsDto newsDto = new NewsDto();
+            newsDto.setLead(Strings.nullToEmpty(news.getLead()));
+            newsDto.setLeadText(Strings.nullToEmpty(news.getLeadText()));
+            newsDto.setImage(Strings.nullToEmpty(news.getImage()));
+
+            List<NewsContentDto> newsContentDtoList = new ArrayList<>();
+            newsDto.setContents(newsContentDtoList);
+
+            if (news.getNewsContentList() != null) {
+                for (NewsContent content : news.getNewsContentList()) {
+                    NewsContentDto newsContentDto = new NewsContentDto();
+
+                    newsContentDto.setTitle(content.getTitle() == null ? "" : content.getTitle());
+                    newsContentDto.setDate(content.getDate() == null ? "" : content.getDate());
+                    newsContentDto.setSource(content.getSource() == null ? "" : content.getSource());
+                    newsContentDto.setImage(content.getImage() == null ? "" : content.getImage());
+                    newsContentDto.setImageDesc(content.getImageDesc() == null ? "" : content.getImageDesc());
+                    newsContentDto.setText(content.getText() == null ? "" : content.getText());
+                    newsContentDto.setUrl(content.getUrl() == null ? "" : content.getUrl());
+
+                    newsContentDtoList.add(newsContentDto);
+                }
+            }
+
+            return newsDto;
+        }
+    }
+
+    @Override
+    public ModelAndView getSpecificNews(String newsId) {
+        ModelAndView mv = new ModelAndView("news");
+        News news = newsDao.getNewsById(newsId);
+        if (news == null) {
+            mv = null;
+        } else{
+            mv.addObject("lead", news.getLead());
+            mv.addObject("leadText", news.getLeadText());
+            mv.addObject("image", news.getImage());
+            mv.addObject("newsContentList", news.getNewsContentList());
+        }
+        return mv;
+    }
+}

@@ -1,0 +1,111 @@
+body, ul, li p {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+a{
+	text-decoration: none;
+}
+html,body{width:100%; position:relative;}
+body {
+    font-size: 12px;
+    -webkit-user-select: none; /*无法选择文本*/
+    -webkit-text-size-adjust: none;
+    font-family: helvetica;
+    background-image: url(../resource/img/pgc/bg.png);
+    background-size: cover;
+    font-size: 20px;
+    color: #fff;
+}
+.one .tag{
+    position: relative;
+    top: 82%;
+    padding:11px;
+    padding-left:30px;
+    letter-spacing: 3px;
+    font-size: 38px;
+    height: 60px;
+    width: 200px;
+    background-image:url(../resource/img/activity/lable1.png);
+    background-size: cover;
+}
+.two {
+    margin: 5%;
+}
+.two .title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.two .detail {
+    font: 36px helvetica-light;
+}
+.two .detail .ignore{
+    white-space:nowrap;    
+    word-break:keep-all;    
+    overflow:hidden;    
+    text-overflow:ellipsis; 
+}
+.two .detail img {
+    position: relative;
+    top: 7px;
+    margin-right: 4%;
+    width: 4.5%;
+    display: inline-block;
+    
+}
+.two .detail p {
+    margin:3.5% 0;
+    display: inline-block;
+}
+.two .detail .border_bottom{
+    display: inline-block;
+    border-bottom: 1px #8a8a8a solid;
+}
+
+.two .detail .control{
+    margin-bottom: 16px;
+    word-wrap:break-word;
+    width: 620px;
+    display: inline-flex;
+}
+.two .detail a {
+    color: #ff4f4e
+}
+.three {
+    margin: 10% 5% 7% 5%;
+    text-align: center;
+}
+.three .aty {
+    background: url(../resource/img/activity/details_activity_line@3x.png) no-repeat center;
+    font-size: 46px;
+    margin-bottom: 4%;
+}
+.drb {
+    font-size: 36px;
+    line-height: 200%;
+    text-align: left;
+}
+.four #text_title {
+    text-align: left;
+    margin: 0 5% 3.4% 5%;
+    font-size: 46px
+}
+
+.four .inner {
+    margin: 0 5%;
+}
+
+.four .small {
+	margin:3% 0;
+    color: #ffffff;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 32px;
+}
+footer{
+	margin-bottom: 10%;
+}
