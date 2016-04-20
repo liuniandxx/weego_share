@@ -7,24 +7,28 @@ import java.util.Map;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.weego.main.dao.ActivityDao;
-import com.weego.main.model.Activities;
 import com.weego.main.model.ActivitiesImagesDesc;
 import com.weego.main.service.ActivityService;
 import com.weego.main.util.HttpUtil;
 
+//@Component
 @Service("cityActivityService")
 public class ActivityServiceImpl implements ActivityService {
 
 	private Logger logger = LogManager.getLogger(ActivityServiceImpl.class);
-	
-	private String ACTIVITY_REQUEST_URL = "http://123.56.65.17/api/v2/activityDetail";
+
+	private String ACTIVITY_REQUEST_URL = "http://www.weegotr.com/api/v2/activityDetail";
 	private String coverImageUrl = "http://weegotest.b0.upaiyun.com/activities/iosimgs/";
-	
+
+	@Value("${value}")
+	private Boolean testvalue;
+
 	@Autowired
 	private ActivityDao cityActivityDao;
 
@@ -55,7 +59,7 @@ public class ActivityServiceImpl implements ActivityService {
 	
 	@Override
 	public ModelAndView getSpecifiedActivity(String activityId) {
-
+		System.out.println("++++++++" + testvalue);
 		ModelAndView mv = new ModelAndView("activity");
 		try {
 			JSONObject result = JSONObject.parseObject(HttpUtil.sendGet(ACTIVITY_REQUEST_URL, "aid=" + activityId, "other"));

@@ -42,12 +42,12 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/views/js/"/>
     <mvc:resources mapping="/css/**" location="/WEB-INF/views/css/"/>
 
-    <mvc:resources mapping="/api/resource/**" location="/WEB-INF/views/resource/"/>
-    <mvc:resources mapping="/api/js/**" location="/WEB-INF/views/js/"/>
-    <mvc:resources mapping="/api/css/**" location="/WEB-INF/views/css/"/>
-
-    <mvc:resources mapping="/app/resource/**" location="/WEB-INF/views/resource/"/>
-    <mvc:resources mapping="/app/js/**" location="/WEB-INF/views/js/"/>
-    <mvc:resources mapping="/app/css/**" location="/WEB-INF/views/css/"/>
+    <mvc:resources mapping="/news/resource/**" location="/WEB-INF/views/resource/"/>
+    <mvc:resources mapping="/news/js/**" location="/WEB-INF/views/js/"/>
+    <mvc:resources mapping="/news/css/**" location="/WEB-INF/views/css/"/>
+    
+    <mvc:resources mapping="/share/resource/**" location="/WEB-INF/views/resource/"/>
+    <mvc:resources mapping="/share/js/**" location="/WEB-INF/views/js/"/>
+    <mvc:resources mapping="/share/css/**" location="/WEB-INF/views/css/"/>
 
 </beans>

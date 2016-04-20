@@ -17,7 +17,7 @@ public class HttpUtilTest extends BaseTest {
 	@Test
 	public void testPOI() {
 	
-		String url = "http://123.56.65.17/api/v2/pgcDetail";
+		String url = "http://www.weegotr.com/api/v2/pgcDetail";
 		String pgcId = "56ebea959a13859217000365";
 		JSONObject result =  JSONObject.parseObject(HttpUtil.sendGet(url, "pgcId=" + pgcId, "other"));
 		JSONObject json = result.getJSONObject("result");

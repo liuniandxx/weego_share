@@ -25,14 +25,15 @@ body {
     letter-spacing: 3px;
     font-size: 38px;
     height: 60px;
-    width: 200px;
+    width: 215px;
     background-image:url(../resource/img/activity/lable1.png);
     background-size: cover;
 }
 .two {
-    margin: 5%;
+    margin: 45px 18px 50px 28px;
 }
 .two .title {
+    margin-top: 60px;
     font-size: 60px;
     font-weight: bold;
     color: #fff;
@@ -58,31 +59,34 @@ body {
     
 }
 .two .detail p {
-    margin:3.5% 0;
+    margin:30px 0;
     display: inline-block;
 }
 .two .detail .border_bottom{
     display: inline-block;
-    border-bottom: 1px #8a8a8a solid;
+    border-bottom: 1px solid rgba(138,138,138,0.4);
 }
 
 .two .detail .control{
     margin-bottom: 16px;
     word-wrap:break-word;
-    width: 620px;
+    width: 695px;
     display: inline-flex;
 }
 .two .detail a {
     color: #ff4f4e
 }
+.two .detail #ip{
+    color: #ff4f4e
+}
 .three {
-    margin: 10% 5% 7% 5%;
+    margin:6% 16px 7% 16px;
     text-align: center;
 }
 .three .aty {
     background: url(../resource/img/activity/details_activity_line@3x.png) no-repeat center;
     font-size: 46px;
-    margin-bottom: 4%;
+    margin-bottom: 30px;
 }
 .drb {
     font-size: 36px;
@@ -91,12 +95,12 @@ body {
 }
 .four #text_title {
     text-align: left;
-    margin: 0 5% 3.4% 5%;
+    margin: 0 28px 3.4% 28px;
     font-size: 46px
 }
 
 .four .inner {
-    margin: 0 5%;
+    margin: 0 28px;
 }
 
 .four .small {
@@ -109,3 +113,17 @@ body {
 footer{
 	margin-bottom: 10%;
 }
+.down_link{
+    z-index: 200;
+    position: fixed;
+    width: 245px;
+    height: 83px;
+    bottom: 55px;
+    right: 70px;
+}
+.download{
+    width: 100%;
+      position: fixed;
+      bottom: 0;
+}
+

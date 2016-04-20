@@ -6,13 +6,14 @@
 <meta charset="UTF-8">
 <title>${lead}</title>
 <link rel="stylesheet" type="text/css" href="../css/news.css">
+<script type="text/javascript" src="../resource/jquery-1.3.2.min.js"></script>
 <style type="text/css">
 .bg {
 	position: relative;
 	background-size: cover;
 	height: 650px;
 	width: 100%;
-	margin-bottom: 60px;
+	margin-bottom: 65px;
 }
 </style>
 </head>
@@ -27,7 +28,7 @@
 	<!-- 循环 -->
 	<c:if test="${newsContentList!=null}">
 		<c:forEach items="${newsContentList}" var="newsContent">
-			<div class="page">
+			<div class="page" id="page1">
 				<c:if test="${newsContent.title!=null && newsContent.title!=''}">
 					<div class="title">${newsContent.title}</div>
 				</c:if>
@@ -72,6 +73,10 @@
 		</c:forEach>
 	</c:if>
 	<footer></footer>
-
 </body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#page1").addClass("no_border")
+})
+</script>
 </html>

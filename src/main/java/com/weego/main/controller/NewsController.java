@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 @RestController
-@RequestMapping("/api/v2")
+@RequestMapping("/news/v1")
 public class NewsController {
 
     private static Logger logger = LogManager.getLogger(NewsController.class);

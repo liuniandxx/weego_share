@@ -37,24 +37,23 @@ body {
 }
 .page{
 	margin:0 16px 40px 16px;
-	border-bottom: 1px solid rgba(138,138,138,0.4);
+	border-top: 1px solid rgba(138,138,138,0.4);
 }
 .page .title{
-	margin:40px 12px;
-	font-size: 45px;
+	margin:40px 12px 40px 12px;
+	font-size: 47px;
 }
 .page .text{
-	margin:40px 12px;
+	margin:35px 12px 40px 12px;
 	font-size: 38px;
-	line-height: 60px;
+	line-height: 68px;
 }
 .page .resource{
-	
-	margin:40px 12px 60px 12px;
+	margin:40px 28px 60px 12px;
 }
 .page .resource .time{
 	opacity: 0.6;
-	font-size: 32px;
+	font-size: 34px;
 	float: left;
 }
 .page .resource span{
@@ -70,17 +69,17 @@ body {
 	margin-right: 20px;
 }
 .page .resource .readmore .arrow{
-	margin-top: 4px;
+	margin-top: 12px;
 	float: right;
 	width:0; 
     height:0; 
-    border-top:17px solid transparent;
-    border-bottom: 17px solid transparent;
-    border-left: 17px solid #fff;
+    border-top:14px solid transparent;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #fff;
 }
 .page .pic{
 	background-size: cover;
-	height: 530px;
+	height: 540px;
 	margin:60px 0 20px 0;
 }
 .page .pic_desc{
@@ -91,4 +90,7 @@ body {
 }
 footer{
 	margin-bottom: 80px;
+}
+.no_border{
+	border-top: none;
 }

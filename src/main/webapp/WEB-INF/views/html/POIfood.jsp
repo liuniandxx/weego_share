@@ -435,6 +435,8 @@ header {
 			</div>
 		</c:if>
 	</div>
+	<div style="margin-bottom: 245px"></div>
+	<a href="https://itunes.apple.com/cn/app/weego-jian-dan-ni-de-lu-xing/id924423318?mt=8" class="down_link"></a>
 	<img class="download" src="../resource/img/poi/plan.png">
 </body>
 <script type="text/javascript" src="../js/POI.js"></script>

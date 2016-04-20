@@ -11,8 +11,8 @@
 header {
 	background-image: url(${cover_img});
 	background-size: cover;
-	height: 50%;
-	width: 100%;
+	height:53%;
+	width:100%;
 }
 
 .page .poi {
@@ -142,19 +142,25 @@ header {
 		</c:when>
 		<c:otherwise>
 			<footer>
-				<h5>由weego重新排版  <a href="${original.url} ">阅读全文</a></h5>
+				<div class="h5">由weego重新排版  <a href="${original.url} ">阅读全文</a></div>
 				<div class="logo">
-					<img src="${original.image }">
+					<!-- <div style="height: 150px;width: 150px">
+						<img src="http://weegotest.b0.upaiyun.com/brands/origin/5708b099a9ec2ee81e00000d.png">
+					</div>
+					<img src="http://weegotest.b0.upaiyun.com/brands/origin/5708b099a9ec2ee81e00000d.png"> -->
+					
+					<img src="${original.image}">
+					
 				</div>
 				<div class="accounts">${original.author }</div>
 				<div class="accounts_breif">${original.desc} </div>
 
-				<!-- <div class="from">
-					作者：<span id="author">${original.author}</span>,来源：<span id="from">${original.source}</span>
-				</div> -->
 			</footer>
 		</c:otherwise>
 	</c:choose>
+	<div style="margin-bottom: 245px"></div>
+	<a href="https://itunes.apple.com/cn/app/weego-jian-dan-ni-de-lu-xing/id924423318?mt=8" class="down_link"></a>
+	<img class="download" src="../resource/img/poi/plan.png">
 </body>
 <script type="text/javascript" src="../js/PGC.js"></script>
 </html>

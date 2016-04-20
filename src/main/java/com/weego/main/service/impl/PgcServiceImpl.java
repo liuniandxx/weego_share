@@ -31,7 +31,7 @@ public class PgcServiceImpl implements PgcService {
 	
 	private Logger logger = LogManager.getLogger(PgcServiceImpl.class);
 	
-	private String PGC_REQUEST_URL = "http://123.56.65.17/api/v2/pgcDetail";
+	private String PGC_REQUEST_URL = "http://www.weegotr.com/api/v2/pgcDetail";
 	private String coverImageUrl = "http://weegotest.b0.upaiyun.com/brands/iosimgs/";
 	private String firstImageUrl = "http://weegotest.b0.upaiyun.com/attractions/origin/";
 	private String secondImageUrl = "http://weegotest.b0.upaiyun.com/restaurant/origin/";

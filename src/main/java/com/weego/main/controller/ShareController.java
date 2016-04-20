@@ -15,7 +15,7 @@ import com.weego.main.service.NewsService;
 import com.weego.main.service.PgcService;
 
 @Controller
-@RequestMapping("/app")
+@RequestMapping("/share/v1")
 public class ShareController {
 	
 	@Autowired

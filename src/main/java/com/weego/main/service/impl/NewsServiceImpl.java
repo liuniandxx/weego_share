@@ -8,6 +8,8 @@ import com.weego.main.dto.NewsDto;
 import com.weego.main.model.News;
 import com.weego.main.model.NewsContent;
 import com.weego.main.service.NewsService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.ModelAndView;
@@ -17,6 +19,10 @@ import java.util.List;
 
 @Service("newsService")
 public class NewsServiceImpl implements NewsService {
+    private Logger logger = LogManager.getLogger(NewsServiceImpl.class);
+
+    private String leadImageUrl = "http://weegotest.b0.upaiyun.com/brands/origin/";
+    private String contentImageUrl = "http://weegotest.b0.upaiyun.com/restaurant/origin/";
 
     @Autowired
     NewsDao newsDao;
@@ -65,7 +71,24 @@ public class NewsServiceImpl implements NewsService {
         } else{
             mv.addObject("lead", news.getLead());
             mv.addObject("leadText", news.getLeadText());
+            String image = news.getImage();
+            if(Strings.isNullOrEmpty(image)) {
+                news.setImage(Strings.nullToEmpty(image));
+            } else {
+                news.setImage(leadImageUrl + image);
+            }
             mv.addObject("image", news.getImage());
+            List<NewsContent> newsContentList = news.getNewsContentList();
+            if(newsContentList != null && newsContentList.size() > 0) {
+                for(NewsContent content : newsContentList) {
+                    String contentImage = content.getImage();
+                    if(Strings.isNullOrEmpty(contentImage)) {
+                        content.setImage(Strings.nullToEmpty(contentImage));
+                    } else {
+                        content.setImage(contentImageUrl + contentImage);
+                    }
+                }
+            }
             mv.addObject("newsContentList", news.getNewsContentList());
         }
         return mv;
