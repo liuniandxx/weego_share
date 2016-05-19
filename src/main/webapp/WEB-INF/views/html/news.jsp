@@ -19,7 +19,7 @@
 <body>
 	<!-- 可能会缺失，要判断 -->
 	<c:if test="${image != null && image != ''}">
-		<div class="bg" style="background-image: url(http://weegotest.b0.upaiyun.com/brands/origin/${image});">
+		<div class="bg" style="background-image: url(${image});">
 			<img src="../resource/img/pgc/overlay.png">
 			<h1 class="bg_title">${lead}</h1>
 		</div>
@@ -52,7 +52,7 @@
 				</c:if>
 				<c:if test="${newsContent.image!=null && newsContent.image!=''}">
 					<div class="pic"
-						style="background-image: url(http://weegotest.b0.upaiyun.com/restaurant/origin/${newsContent.image});"></div>
+						style="background-image: url(${newsContent.image});"></div>
 				</c:if>
 				<c:if
 					test="${newsContent.imageDesc!=null && newsContent.imageDesc!=''}">
