@@ -3,14 +3,21 @@ var _comment_from = $("#comment_from").html();
 var _reviews =$(".reviews").html();
 
 $(document).ready(function(){
-	$("#single").addClass("first")
+	$("#single").addClass("first");
+	$(".down_link").click(function(){
+		$(".share").addClass("show");
+	});
+	$(".share").click(function(){
+		$(".share").removeClass("show");
+	});
+
 })
 
 if(_tag == ""){
 	$(".type").hide();
 }
 
-if(_comment_from == "来自于google"){
+if(_comment_from == "来自于Google"){
 	$("#comment_pic").attr("src","../resource/img/poi/google.png");
 	$(".comment").width(475);
 }else{

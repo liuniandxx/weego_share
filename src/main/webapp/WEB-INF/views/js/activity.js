@@ -44,3 +44,12 @@ var _tag = $(".tag").html();
 		$(".tag").hide();
 	}
 
+$(document).ready(function(){
+	$(".down_link").click(function(){
+		$(".share").addClass("show");
+	});
+	$(".share").click(function(){
+		$(".share").removeClass("show");
+	});
+
+})

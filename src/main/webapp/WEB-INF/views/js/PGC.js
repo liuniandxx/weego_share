@@ -21,7 +21,15 @@ else if(_icon =="2"){
 	$(".icon").attr("src","../resource/img/pgc/icon.png")
 }
 
+$(document).ready(function(){
+	$(".down_link").click(function(){
+		$(".share").addClass("show");
+	});
+	$(".share").click(function(){
+		$(this).removeClass("show");
+	});
 
+})
 
 if(_author_pic == ""){
 	$(".author").hide();

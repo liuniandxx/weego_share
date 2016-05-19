@@ -5,14 +5,14 @@
 <head>
 	<meta charset="UTF-8"> 
 	<meta name="apple-touch-fullscreen" content="YES" /> 
-	<title>${title}</title>
+	<title>新城市活动</title>
 	<script type="text/javascript" src="../resource/jquery-1.3.2.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/activity.css">
 	<style type="text/css">
 		.one {
 			background: url(${bg});
 			background-size: cover;
-			height:52%;
+			height: 41%;
 		}
 		.four #pic {
 			background-size: cover;
@@ -112,9 +112,9 @@
 
 	<footer></footer>
 	<div style="margin-bottom: 245px"></div>
-	<a href="https://itunes.apple.com/cn/app/weego-jian-dan-ni-de-lu-xing/id924423318?mt=8" class="down_link"></a>
-	<a href=""></a>
+	<div class="down_link"></div>
 	<img class="download" src="../resource/img/poi/plan.png">
+	<img class="share"  src="../resource/img/poi/share.jpg">
 </body>
 <script type="text/javascript" src="../js/activity.js"></script>
 </html>

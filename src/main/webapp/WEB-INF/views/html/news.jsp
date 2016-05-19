@@ -6,21 +6,20 @@
 <meta charset="UTF-8">
 <title>${lead}</title>
 <link rel="stylesheet" type="text/css" href="../css/news.css">
-<script type="text/javascript" src="../resource/jquery-1.3.2.min.js"></script>
 <style type="text/css">
 .bg {
 	position: relative;
 	background-size: cover;
 	height: 650px;
 	width: 100%;
-	margin-bottom: 65px;
+	margin-bottom: 60px;
 }
 </style>
 </head>
 <body>
 	<!-- 可能会缺失，要判断 -->
 	<c:if test="${image != null && image != ''}">
-		<div class="bg" style="background-image: url(${image});">
+		<div class="bg" style="background-image: url(http://weegotest.b0.upaiyun.com/brands/origin/${image});">
 			<img src="../resource/img/pgc/overlay.png">
 			<h1 class="bg_title">${lead}</h1>
 		</div>
@@ -28,16 +27,12 @@
 	<!-- 循环 -->
 	<c:if test="${newsContentList!=null}">
 		<c:forEach items="${newsContentList}" var="newsContent">
-			<div class="page" id="page1">
+			<div class="page clearfix" id="page">
 				<c:if test="${newsContent.title!=null && newsContent.title!=''}">
 					<div class="title">${newsContent.title}</div>
 				</c:if>
-				<c:if test="${newsContent.text!=null && newsContent.text!=''}">
-					<div class="text">${newsContent.text}</div>
-				</c:if>
-
 				<c:if
-					test="${(newsContent.date!=null && newsContent.date!='') || (newsContent.source!=null && newsContent.source!='') || (newsContent.url!=null && newsContent.url!='') }">
+					test="${(newsContent.date!=null && newsContent.date!='') || (newsContent.source!=null && newsContent.source!='') }">
 
 					<div class="resource clearfix">
 						<c:if
@@ -52,31 +47,36 @@
 								</c:if>
 							</div>
 						</c:if>
-						<c:if test="${newsContent.url!=null && newsContent.url!=''}">
-							<div class="readmore">
-								<a href="${newsContent.url}">阅读全文</a>
-								<div class="arrow"></div>
-							</div>
-						</c:if>
 					</div>
 
 				</c:if>
 				<c:if test="${newsContent.image!=null && newsContent.image!=''}">
 					<div class="pic"
-						style="background-image: url(${newsContent.image});"></div>
+						style="background-image: url(http://weegotest.b0.upaiyun.com/restaurant/origin/${newsContent.image});"></div>
 				</c:if>
 				<c:if
 					test="${newsContent.imageDesc!=null && newsContent.imageDesc!=''}">
 					<div class="pic_desc">${newsContent.imageDesc}</div>
 				</c:if>
+				<c:if test="${newsContent.text!=null && newsContent.text!=''}">
+					<div class="text">${newsContent.text}</div>
+				</c:if>
+				<c:if test="${newsContent.url!=null && newsContent.url!=''}">
+					<div class="readmore">
+						<a href="${newsContent.url}">阅读全文</a>
+						<div class="arrow"></div>
+					</div>
+				</c:if>
 			</div>
 		</c:forEach>
 	</c:if>
 	<footer></footer>
+	<div class="down_link"></div>
+	<div style="margin-bottom: 245px"></div>
+	<div class="down_link"></div>
+	<img class="download" src="../resource/img/poi/plan.jpg">
+	<img class="share"  src="../resource/img/poi/share.jpg">
 </body>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#page1").addClass("no_border")
-})
-</script>
+<script type="text/javascript" src="../resource/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../js/news.js"></script>
 </html>
