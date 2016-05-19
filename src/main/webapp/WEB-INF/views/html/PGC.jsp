@@ -4,6 +4,11 @@
 
 <head>
 <meta charset="UTF-8">
+<meta name="format-detection" content="telephone=no">
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+<meta name="apple-mobile-web-app-capable" content="yes"> -->
+
 <title>${title}</title>
 <link rel="stylesheet" type="text/css" href="../css/PGC.css">
 <script type="text/javascript" src="../resource/jquery-1.3.2.min.js"></script>
@@ -11,8 +16,8 @@
 header {
 	background-image: url(${cover_img});
 	background-size: cover;
-	height:53%;
-	width:100%;
+	height: 50%;
+	width: 100%;
 }
 
 .page .poi {
@@ -55,22 +60,21 @@ header {
 			</div>
 		</c:otherwise>
 	</c:choose>
-
-	<div class="drb ccc">
-		<img class="float-l" src="../resource/img/pgc/yin1.png">
-		<div>
-			<span style="font-size: 38px;">&nbsp;&nbsp;&nbsp;</span>${breif}
+	<c:if test="${breif != null && breif != ''}">
+		<div class="drb ccc">
+			<img class="float-l" src="../resource/img/pgc/yin1.png">
+			<div>
+				<span style="font-size: 38px;">&nbsp;&nbsp;&nbsp;</span>${breif}
+			</div>
+			<img class="float-r" src="../resource/img/pgc/yin2.png">
 		</div>
-		<img class="float-r" src="../resource/img/pgc/yin2.png">
-	</div>
+	</c:if>
 	<c:forEach items="${poilist}" var="PgcPoi">
 		<div class="page">
 			<c:choose>
 				<c:when
 					test="${PgcPoi.paragraph.title =='' || PgcPoi.paragraph.title == null}">
 					<div style="display: none" class="page_title">
-						<%-- <div class="small"></div>
-						<h2 id="text_title">${PgcPoi.paragraph.title}</h2> --%>
 					</div>
 				</c:when>
 				<c:otherwise>
@@ -142,15 +146,9 @@ header {
 		</c:when>
 		<c:otherwise>
 			<footer>
-				<div class="h5">由weego重新排版  <a href="${original.url} ">阅读全文</a></div>
+				<h5>由weego重新排版  <a href="${original.url} ">阅读全文</a></h5>
 				<div class="logo">
-					<!-- <div style="height: 150px;width: 150px">
-						<img src="http://weegotest.b0.upaiyun.com/brands/origin/5708b099a9ec2ee81e00000d.png">
-					</div>
-					<img src="http://weegotest.b0.upaiyun.com/brands/origin/5708b099a9ec2ee81e00000d.png"> -->
-					
-					<img src="${original.image}">
-					
+					<img src="${original.image }">
 				</div>
 				<div class="accounts">${original.author }</div>
 				<div class="accounts_breif">${original.desc} </div>
@@ -159,8 +157,9 @@ header {
 		</c:otherwise>
 	</c:choose>
 	<div style="margin-bottom: 245px"></div>
-	<a href="https://itunes.apple.com/cn/app/weego-jian-dan-ni-de-lu-xing/id924423318?mt=8" class="down_link"></a>
-	<img class="download" src="../resource/img/poi/plan.png">
+	<div class="down_link"></div>
+	<img class="download" src="../resource/img/poi/plan.jpg">
+	<img class="share"  src="../resource/img/poi/share.jpg">
 </body>
 <script type="text/javascript" src="../js/PGC.js"></script>
 </html>

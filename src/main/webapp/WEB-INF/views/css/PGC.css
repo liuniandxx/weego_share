@@ -19,16 +19,20 @@
 	.extra{
 		margin-top: -204px;
 	}
-	header h1{
-		margin:0 7%;
-		top: 74%;
+	header{
 		position: relative;
+	}
+	header h1{
+		margin:0 5%;
+		bottom: 135px;
+		position: absolute;
 		text-align: center;
 		font-size:68px ;
 		font-weight: bold;
 		text-shadow:2px 2px 1px rgba(0,0,48,0.6);
 	}
 	.author{
+		position: relative;
 		text-align: center;
 		margin: -105px 3% 6% 3%;
 	}
@@ -36,16 +40,15 @@
 		margin:3px auto;
 		background:url(../resource/img/pgc/pgc_avatar.png);
 		background-size: cover;
-		width: 190px;
+		width: 200px;
 	}
 	.author .head img{
-		margin: 24px;
-		width: 155px;
-		height: 155px;
+		margin: 20px;
+		width: 81%;
 		border-radius: 50%;
 	}
 	.author h1{
-		padding-top: 30px;
+		padding-top: 3%;
 		margin:0;
 		text-align: center;
 		font-size: 58px;
@@ -55,7 +58,7 @@
 		font-size: 38px;
 		line-height: 50px;
 		text-align: center;
-		margin: 25px 0 60px 0;
+		margin-top:40px;
 	}
 	.line1{
 		margin:60px 0 85px 0;
@@ -66,7 +69,7 @@
 		width:100%;
 	}
 	.from{
-		margin:40px 28px 60px 28px;
+		margin:40px 28px 40px 28px;
     	text-align: center;
     	font: 38px HelveticaNeue-Light;
 	}
@@ -83,7 +86,7 @@
 		margin:0;
 	}
 	.ccc{
-		margin-top: 100px;
+		margin-top: 65px;
 		margin-bottom:105px;
 	}
 	.page .page_title{
@@ -109,13 +112,13 @@
 	}
 	.page .poi .type{
 		padding-right: 28px;
-		padding-top: 8px;
+		padding-top: 12px;
 		font-size: 38px;
 		position: absolute;
 		top: 8%;
 		background-image:url(../resource/img/pgc/lable.png);
 		background-size: cover;
-		height: 65px;
+		height: 60px;
 		width: 215px;
 	}
 	.page .poi .type .type_text{
@@ -139,7 +142,7 @@
 	}
 	.page .poi .center .icon{
 		position: relative;
-		top:22px;
+		top:15px;
 		display: inline-block;
 		margin: 0 32px;
 		
@@ -177,14 +180,14 @@
 	footer{
 		margin-bottom: 60px;
 	}
-	footer .h5 {
+	footer h5 {
 		color: rgba(255,255,255,0.5);
 		padding-bottom: 40px;
 		border-bottom: 1px solid rgba(138,138,138,0.4);
 	    margin: 5% 3%;
 	    font-size: 38px;
 	}
-	footer .h5 a {
+	footer h5 a {
 		text-decoration: none;
 	    color: #ff4f4e;
 	}
@@ -200,26 +203,36 @@
 	    left: 410px;
 	}
 	footer .accounts {
-	    font-size: 45px;
+	    font-size: 36px;
 	    font-weight: bold;
 	    text-align: center;
 	}
 	footer .accounts_breif{
-	    margin:40px 3% 60px 3%;
+	    margin:60px 3% 60px 3%;
 	    text-align: center;
 	    font-size: 38px;
 	    line-height: 65px;
 	}
 	.down_link{
 		z-index: 200;
-		position: fixed;
-		width: 245px;
-		height: 83px;
-		bottom: 55px;
-		right: 70px;
+  		position: fixed;
+  		width: 245px;
+  		height: 65px;
+  		bottom: 27px;
+  		right: 39px;
 	}
 	.download{
 		width: 100%;
 	  	position: fixed;
 	  	bottom: 0;
+	}
+	.share{
+		display: none;
+		top: 0;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+	}
+	.show{
+		display: block;
 	}
